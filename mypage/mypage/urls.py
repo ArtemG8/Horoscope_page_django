@@ -22,5 +22,4 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('horoscope/type/', views_horo.get_type),
     path('horoscope/', include('horoscope.urls')),
-    path('week days/', include('week_days.urls')),
 ]
