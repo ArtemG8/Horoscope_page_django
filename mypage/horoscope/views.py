@@ -92,14 +92,3 @@ def get_info_word(request, sign_zodiac: str):
         return HttpResponse(water_zodiacs.get('Scorpio'))
     elif sign_zodiac == 'Pisces':
         return HttpResponse(water_zodiacs.get('Pisces'))
-
-# Попробовать сделать передачу как в первой паре функций. Когда запрос уходит в sign-функцию по последовательности
-
-# def get_info_number(request, sign_zodiac: int):
-#     zadiac_list = list(zodiac_dict)
-#     if sign_zodiac > len(zadiac_list):
-#         return HttpResponseNotFound('Такого знака нет :(')
-#     else:
-#         name_zodiac = zadiac_list[sign_zodiac - 1]
-#         redirect_url = reverse('horoscope_name', args=(name_zodiac,))
-#         return HttpResponseRedirect(redirect_url)
